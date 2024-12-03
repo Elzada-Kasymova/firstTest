@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Форма</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Кнопка для открытия модального окна -->
+    <button id="openModalButton">Открыть форму</button>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ввод данных клиента</h2>
+
+            <form id="crmForm">
+                <label>Имя: <input type="text" id="firstName" required></label><br><br>
+                <label>Фамилия: <input type="text" id="lastName" required></label><br><br>
+                <label>Телефон: <input type="tel" id="phone" required></label><br><br>
+                <label>Email: <input type="email" id="email"></label><br><br>
+
+                <h2>Детали работы</h2>
+                <label>Тип работы: <input type="text" id="jobType" required></label><br><br>
+                <label>Источник работы: <input type="text" id="jobSource"></label><br><br>
+                <label>Описание: <textarea id="description"></textarea></label><br><br>
+
+                <h2>Адрес обслуживания</h2>
+                <label>Адрес: <input type="text" id="address"></label><br><br>
+                <label>Город: <input type="text" id="city"></label><br><br>
+                <label>Штат: <input type="text" id="state"></label><br><br>
+                <label>Почтовый индекс: <input type="text" id="zipCode"></label><br><br>
+
+                <h2>Запланировано</h2>
+                <label>Дата начала: <input type="date" id="startDate"></label><br><br>
+                <label>Время начала: <input type="time" id="startTime"></label><br><br>
+                <label>Время окончания: <input type="time" id="endTime"></label><br><br>
+
+                <button type="button" onclick="submitForm()">Сохранить в CRM</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
